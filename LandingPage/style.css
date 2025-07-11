@@ -1,0 +1,388 @@
+/* Basic Resets & Global Styles */
+:root {
+    --primary-green: #28a745; /* Darker green for main CTAs */
+    --light-green: #e0ffe0;   /* Light background for some sections */
+    --text-dark: #333;
+    --text-light: #fff;
+    --gradient-start: #e0ffe0; /* Gradient start for hero/backgrounds */
+    --gradient-end: #c0f0c0;   /* Gradient end for hero/backgrounds */
+    --card-background: #ffffff;
+    --border-light: #ddd;
+    --box-shadow-light: rgba(0, 0, 0, 0.08);
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: var(--text-dark);
+    background-color: #f8fcf8; /* A very light green/off-white */
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+h1, h2, h3 {
+    margin-top: 0;
+    color: #1a4d2e; /* Darker green for headings */
+}
+
+h2 {
+    font-size: 2.5em;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    text-align: center;
+    font-size: 1.1em;
+    color: #555;
+    margin-bottom: 50px;
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    border: 2px solid transparent;
+    font-size: 1em;
+}
+
+.btn-primary { /* New User button */
+    background-color: #007bff; /* Blue as in image */
+    color: var(--text-light);
+}
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+.btn-secondary { /* Login button */
+    background-color: transparent;
+    color: #555;
+    border: 2px solid #ccc;
+    margin-right: 15px; /* Spacing between Login and New User */
+}
+.btn-secondary:hover {
+    background-color: #f0f0f0;
+}
+
+.btn-success { /* Start Learning button */
+    background-color: var(--primary-green);
+    color: var(--text-light);
+    border-color: var(--primary-green);
+    margin-right: 20px;
+}
+.btn-success:hover {
+    background-color: #218838;
+    border-color: #218838;
+}
+
+.btn-outline-light { /* Quick Scan button */
+    background-color: transparent;
+    color: var(--primary-green);
+    border: 2px solid var(--primary-green);
+}
+.btn-outline-light:hover {
+    background-color: var(--primary-green);
+    color: var(--text-light);
+}
+
+.btn-text { /* Save Earth button/text link */
+    background: none;
+    border: none;
+    color: #555;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 0; /* Remove default button padding */
+    margin-right: 20px;
+}
+.btn-text:hover {
+    color: #007bff;
+}
+
+
+/* Header Styles */
+header {
+    background-color: var(--card-background);
+    padding: 15px 0;
+    box-shadow: 0 2px 5px var(--box-shadow-light);
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.8em;
+    font-weight: 700;
+    color: #1a4d2e;
+}
+
+.nav-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+/* Hero Section Styles */
+.hero-section {
+    background: linear-gradient(to right, #e0ffe0, #c0f0c0); /* Green gradient from image */
+    text-align: center;
+    padding: 100px 0;
+    color: #1a4d2e; /* Dark green for text on light green background */
+}
+
+.hero-section .container {
+    max-width: 900px; /* Narrower for focus */
+}
+
+.tagline-small {
+    font-size: 1.1em;
+    font-weight: 500;
+    color: #28a745;
+    margin-bottom: 10px;
+    display: block; /* Ensures it takes full width for centering */
+}
+
+.hero-section h1 {
+    font-size: 3.8em;
+    margin-bottom: 20px;
+    line-height: 1.1;
+}
+
+.hero-description {
+    font-size: 1.3em;
+    margin-bottom: 40px;
+    color: #444;
+}
+
+.hero-buttons .btn {
+    font-size: 1.1em;
+}
+
+/* How Smart Recycling Works Section */
+.how-it-works-section, .features-section, .did-you-know-section {
+    padding: 80px 0;
+    background-color: #f8fcf8; /* Light background for sections */
+}
+
+.how-it-works-section {
+    background-color: #edfaf5; /* Slightly different light background */
+}
+
+.steps-grid {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap; /* Allows wrapping on smaller screens */
+}
+
+.step-item {
+    background-color: var(--card-background);
+    border-radius: 12px;
+    padding: 30px;
+    text-align: center;
+    flex: 1; /* Allow items to grow */
+    min-width: 280px; /* Minimum width before wrapping */
+    max-width: 350px;
+    box-shadow: 0 5px 15px var(--box-shadow-light);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.step-number {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: var(--light-green); /* Light green for circles */
+    color: var(--primary-green);
+    font-size: 2em;
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    border: 2px solid var(--primary-green);
+}
+.step-item:nth-child(2) .step-number {
+    background-color: #e0f2ff; /* Light blue for step 2 */
+    color: #007bff;
+    border-color: #007bff;
+}
+
+
+/* Intelligent Recycling Features Section */
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.feature-card {
+    background-color: var(--card-background);
+    border-radius: 12px;
+    padding: 30px;
+    text-align: center;
+    box-shadow: 0 5px 15px var(--box-shadow-light);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.icon-circle {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: var(--light-green);
+    color: var(--primary-green);
+    font-size: 2.5em; /* Adjust icon size */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    box-shadow: inset 0 0 0 2px var(--primary-green); /* Inner border effect */
+}
+
+/* Did You Know? Section */
+.did-you-know-section {
+    background: linear-gradient(to right, #007bff, #00c6ff); /* Blue gradient from image */
+    color: var(--text-light);
+    padding: 80px 0;
+    text-align: center;
+}
+
+.did-you-know-section h2 {
+    color: var(--text-light);
+    margin-bottom: 40px;
+}
+
+.facts-grid {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.fact-card {
+    background-color: rgba(255, 255, 255, 0.15); /* Semi-transparent white background */
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+    padding: 25px;
+    flex: 1;
+    min-width: 280px;
+    max-width: 350px;
+    display: flex; /* For vertical centering of text */
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    backdrop-filter: blur(5px); /* Frosted glass effect */
+}
+
+.fact-card p {
+    font-size: 1.1em;
+    margin: 0;
+    line-height: 1.5;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #333;
+    color: var(--text-light);
+    text-align: center;
+    padding: 30px 0;
+    font-size: 0.9em;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 992px) {
+    .hero-section h1 {
+        font-size: 3em;
+    }
+    .hero-description {
+        font-size: 1.1em;
+    }
+    .steps-grid, .features-grid, .facts-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    .logo {
+        font-size: 1.5em;
+    }
+    .nav-links {
+        display: none; /* Hide navigation links for simplicity on small screens */
+        /* For a real project, implement a hamburger menu */
+    }
+    header .container {
+        justify-content: center; /* Center logo if nav is hidden */
+    }
+    .hero-section {
+        padding: 80px 0;
+    }
+    .hero-section h1 {
+        font-size: 2.5em;
+    }
+    .hero-buttons {
+        flex-direction: column; /* Stack buttons on small screens */
+        align-items: center;
+    }
+    .hero-buttons .btn {
+        margin: 10px 0; /* Add vertical spacing */
+        width: 80%; /* Make buttons wider */
+    }
+    h2 {
+        font-size: 2em;
+    }
+    .subtitle {
+        margin-bottom: 30px;
+    }
+    .step-item, .feature-card, .fact-card {
+        min-width: unset; /* Remove min-width to allow more flexibility */
+        width: 100%; /* Take full width of parent grid column */
+        max-width: 400px; /* Optional max width for readability */
+        margin: 0 auto; /* Center individual cards */
+    }
+    .steps-grid, .features-grid, .facts-grid {
+        gap: 20px; /* Reduce gap on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-section {
+        padding: 60px 0;
+    }
+    .hero-section h1 {
+        font-size: 2em;
+    }
+    .hero-description {
+        font-size: 1em;
+    }
+    h2 {
+        font-size: 1.8em;
+    }
+    .btn {
+        padding: 10px 20px;
+        font-size: 0.9em;
+    }
+    .fact-card p {
+        font-size: 1em;
+    }
+}
